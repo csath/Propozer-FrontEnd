@@ -1,0 +1,152 @@
+<section id="content" class="common searchpage">
+    <div class="container">
+        <div class="row">
+            <aside class="refinesearch">
+                <div class="">
+                    <h1>Refine Search</h1>
+                    <ul class="">
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="Country"
+                          }}
+                        </li>
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="State"
+                          }}
+                        </li>
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="Citry"
+                          }}
+                        </li>
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="Gender"
+                          }}
+                        </li>
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="age"
+                          }}
+                        </li>
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="Language"
+                          }}
+                        </li>
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="Education"
+                          }}
+                        </li>
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="Career"
+                          }}
+                        </li>
+                        <li>
+                          {{select-2
+                          content=salaryArray
+                          value=salary
+                          placeholder="Salary"
+                          }}
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="search-btn">Search</a>
+            </aside>
+            <div class="rightpart">
+                <h4>21 Members that match your Partner Preferences.<a href="">Edit</a></h4>
+
+                <div class="rightfilter">
+                    <form>
+                        <div class="field">
+                            <input type="text" name="" value="" placeholder="By date of Profile created">
+                            <button class="search-icon"></button>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="" value="" placeholder="By most recent activity ">
+                            <button class="search-icon"></button>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="" value="" placeholder="Online at the moment">
+                            <button class="search-icon"></button>
+                        </div>
+                    </form>
+                    <div class="views-icon">
+                        <span>View as</span>
+                        <a href="" class="list-view"></a>
+                        <a href="" class="grid-view active"></a>
+                    </div>
+                </div>
+                <div class="detailsbox">
+
+                  {{#each results as |result|}}
+                      <div class="details">
+                          <div class="toppart">
+                              <h3>{{result.id}}</h3>
+
+                              <div class="socialbox">
+                                  <a href="#" class="icon-1"></a>
+                                  <a href="#" class="icon-2"></a>
+                                  <a href="#" class="icon-3"></a>
+                              </div>
+                          </div>
+                          <ul class="detailspart" {{action 'showModal' 'view-profile'}}>
+                              <li>
+                                  <h3>Self</h3>
+
+                                  <p>{{result.myself}}</p>
+                              </li>
+                              <li>
+                                  <h3>Family</h3>
+
+                                  <p>{{result.familyBackground}}</p>
+                              </li>
+                              <li>
+                                  <h3>Education</h3>
+
+                                  <p>{{result.education}}</p>
+                              </li>
+                              <li>
+                                  <h3>Looking for</h3>
+
+                                  <p>{{result.lookingFor}}</p>
+                              </li>
+                          </ul>
+                          <div class="connect-btn">
+                              <a href="#">Connect</a>
+                          </div>
+                      </div>
+                  {{else}}
+                      <p style="color: #999;">Sorry, nobody is here...</p>
+                  {{/each}}
+
+                </div>
+                <ul class="pagination">
+                    <li><a href="" class="prev">Prev</a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="" class="next">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

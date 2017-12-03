@@ -1,0 +1,35 @@
+{{#modal-popup ok='save' close='removeModal'}}
+    <div class="modal-body">
+      <form {{action 'ok' on='submit' target=view}}>
+          <form name="loginForm" id="myLogin" novalidate>
+              <div class="title">
+                  <h1>Login..</h1>
+              </div>
+              <div class="field">
+                  <label>Your Email Address</label>
+                {{input type="email" class="control" valueBinding="email" placeholder="Email" required='required'}}
+                  <p class="help-block" style="color: #FF0000">{{emailMessage}}</p>
+              </div>
+              <div class="field">
+                  <label>Password</label>
+                  {{input type="password" class="control" valueBinding="password" placeholder="Password" required='required'}}
+
+                  <p class="help-block" style="color: #FF0000">{{passwordMessage}}</p>
+              </div>
+              <p class="msg">Your privacy is important to us and we will never rent or sell your information.</p>
+              <button type="button" class="bttn" {{action 'login'}} disabled={{isDisabled}}>Login</button>
+          </form>
+          <div class="field links">
+              <a href="#" class="forgot">Forgot Password ?</a>
+              <p class="new">New to propozer.lk? <a href="#">Create an Account</a></p>
+          </div>
+          <div class="otherlogin">
+              <h3>OR</h3>
+              <a href="#" class="email">Sign up With Email</a>
+              <a href="#" class="fb">Sign up with Facebook</a>
+          </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+    </div>
+{{/modal-popup }}

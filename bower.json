@@ -1,0 +1,9 @@
+{
+  "name": "propozer-app",
+  "dependencies": {
+    "ember": "~2.8.0",
+    "ember-cli-shims": "0.1.1",
+    "select2": "3.5.2",
+    "font-awesome": "^4.7.0"
+  }
+}

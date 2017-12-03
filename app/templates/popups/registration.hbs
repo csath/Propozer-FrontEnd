@@ -1,0 +1,335 @@
+{{#modal-popup ok='save' close='removeModal'}}
+    <div class="modal-body">
+        <form {{action 'ok' on='submit'}}>
+
+            <form name="registrationForm">
+              {{#if regView1}}
+                  <div>
+                      <div class="title">
+                          <h1>Give us brief introduction</h1>
+                      </div>
+                      <div class="field field5 fl">
+                          <label>First Name</label>
+                        {{input type="text" class="control" valueBinding="fname" placeholder="First Name" id="firstName" autofocus="autofocus" required='required'}}
+                          <p class="help-block error-msg"><i>{{fnameMessage}}</i></p>
+                      </div>
+
+                      <div class="field field5 fr">
+                          <label>Last name</label>
+                        {{input type="text" class="control" valueBinding="lname" placeholder="Last Name"required='required'}}
+                          <p class="help-block error-msg"><i>{{lnameMessage}}</i></p>
+                      </div>
+
+                      <div class="field field5 fr">
+                          <label>Email</label>
+                        {{input type="email" class="control" valueBinding="email" placeholder="Email" required='required'}}
+                          <p class="help-block error-msg"><i>{{emailMessage}}</i></p>
+                      </div>
+
+                      <div class="field field5 fr">
+                          <label>Password</label>
+                        {{input type="password" class="control" valueBinding="password" placeholder="Password" required='required'}}
+                          <p class="help-block error-msg"><i>{{passwordMessage}} </i></p>
+                      </div>
+
+                      <div class="field field5 fr">
+                          <label for="password_c">Confirm Password</label>
+                        {{input type="password" class="control" valueBinding="password2" placeholder="Password" required='required'}}
+                          <p class="help-block error-msg"><i>{{password2Message}} </i></p>
+                      </div>
+
+                      <button type="button" {{action 'regView1' 1}} class="bttnNext" disabled={{isDisabled}}>Next
+                      </button>
+                  </div>
+              {{/if}}
+
+              {{#if regView2}}
+                  <div>
+                      <div class="title">
+                          <h1>Basic Information</h1>
+                      </div>
+
+                      <div class="field field5 fl">
+                          <label>Country</label>
+                        {{select-2
+                        content=countryArray
+                        value=country
+                        placeholder="Choose your country living..."
+                        }}
+                          <p class="help-block error-msg"><i>{{countryMessage}} </i></p>
+                      </div>
+
+                      <div class="field field5 fl">
+                          <label>State</label>
+                        {{select-2
+                        content=stateLiveArray
+                        value=stateLive
+                        placeholder="Choose state..."
+                        }}
+
+                          <p class="help-block error-msg"><i>{{stateLiveMessage}} </i></p>
+                      </div>
+
+                      <div class="field field5 fr">
+                          <label>City</label>
+                        {{select-2
+                        content=cityArray
+                        value=city
+                        placeholder="Choose your city..."
+                        }}
+
+                          <p class="help-block error-msg"><i>{{cityMessage}} </i></p>
+                      </div>
+
+                      <div class="field">
+                          <label>Gender</label>
+
+                          <div class="radiobox">
+                              <label>
+                                {{radio-button
+                                value="male"
+                                groupValue=gender
+                                name="gender"}}
+                                  Male
+                              </label>
+                              <label>
+                                {{radio-button
+                                value="female"
+                                groupValue=gender
+                                name="gender"}}
+
+                                  Female
+                              </label>
+                          </div>
+                          <p class="help-block error-msg"><i>{{genderMessage}} </i></p>
+                      </div>
+                      <div class="field">
+                          <label>Height</label>
+                        {{select-2
+                        content=heightArray
+                        value=height
+                        placeholder="Choose your height..."
+                        }}
+
+                          <p class="help-block error-msg"><i>{{heightMessage}} </i></p>
+                      </div>
+                      <div class="field">
+                          <label>Month of Birth</label>
+                        {{select-2
+                        content=dateOfBirthYearArray
+                        value=dateOfBirthYear
+                        placeholder="Year"
+                        class="scontrol2 year"
+                        }}
+
+                        {{select-2
+                        content=dateOfBirthMonthArray
+                        value=dateOfBirthMonth
+                        placeholder="Month"
+                        class="scontrol2 commonw"
+                        }}
+
+                        <br>
+                          <br>
+                          <p class="help-block error-msg"><i>{{yearMessage}} {{monthMessage}}</i></p>
+                      </div>
+                      <div class="field">
+                          <label>Religion</label>
+                        {{select-2
+                        content=relegionArray
+                        value=relegion
+                        placeholder="Choose your religion..."
+                        }}
+
+                          <p class="help-block error-msg"><i>{{relegionMessage}} </i></p>
+                      </div>
+                      <div class="field">
+                          <label>Mother Tongue</label>
+                        {{select-2
+                        content=motherTongueArray
+                        value=motherTongue
+                        placeholder="Choose your language..."
+                        }}
+
+                          <p class="help-block error-msg"><i>{{motherTongueMessage}} </i></p>
+                      </div>
+
+                      <button type="button" {{action 'regView2' 2}} class="bttnNext">Next</button>
+                      <button type="button" {{action 'back' 2}} class="bttnBack">Back</button>
+                  </div>
+              {{/if}}
+
+              {{#if regView3}}
+                  <div>
+                      <div class="title">
+                          <h1>Education and Career</h1>
+                      </div>
+                      <div class="field">
+                          <label>Highest Education </label>
+                        {{select-2
+                        content=highestEducationArray
+                        value=highestEducation
+                        placeholder="Choose your education level..."
+                        }}
+
+                          <p class="help-block error-msg"><i>{{highestEducationMessage}} </i></p>
+
+                      </div>
+                      <div class="field">
+                          <label>Career Field</label>
+                        {{input type="text" class="control" valueBinding="career" placeholder="Career Field..."}}
+
+                      </div>
+
+                      <div class="field">
+                          <label>Monthly Salary</label>
+                        {{select-2
+                        content=salaryArray
+                        value=salary
+                        placeholder="Choose your salary range..."
+                        }}
+
+                          <p class="help-block error-msg"><i>{{salaryMessage}}</i></p>
+                      </div>
+
+                      <button type="button" {{action 'regView3' 3}} class="bttnNext">Next</button>
+                      <button type="button" {{action 'back' 3}} class="bttnBack">Back</button>
+                  </div>
+              {{/if}}
+
+              {{#if regView4}}
+                  <div ng-show="myvalue4th == true">
+                      <div class="title sm-size">
+                          <h1>Your Photo</h1>
+                      </div>
+
+                      {{file-upload}}
+
+                      <p class="help-block error-msg"><i>{{imageMessage}}</i></p>
+                      <button type="button" {{action 'regView4' 4}} class="bttnNext">Next</button>
+                      <button type="button" {{action 'back' 4}} class="bttnBack">Back</button>
+                  </div>
+              {{/if}}
+
+              {{#if regView5}}
+                  <div>
+                      <div class="title sm-size">
+                          <h1>Let them what kind of person you are?</h1>
+                      </div>
+                      <div class="field">
+                          <label>Myself</label>
+                        {{textarea
+                        value=name
+                        class="control phold"
+                        rows="4"
+                        valueBinding="myself"
+                        placeholder="I am 27 years old. I am a simple, honest, family oriented person like travelling, reading, movies and music. I like to enjoy each moment in my life. I studied in a famous girl's school in Colmbo."
+                        }}
+
+                      </div>
+                      <button type="button" {{action 'regView5' 5}} class="bttnNext">Next</button>
+                      <button type="button" {{action 'back' 5}} class="bttnBack">Back</button>
+                  </div>
+              {{/if}}
+
+              {{#if regView6}}
+                  <div>
+                      <div class="title sm-size">
+                          <h1>Let them know about family background</h1>
+                      </div>
+                      <div class="field">
+                          <label>My Family</label>
+                        {{textarea
+                        value=name
+                        class="control phold"
+                        rows="4"
+                        valueBinding="myFamily"
+                        placeholder="My father is retired now and my mother is a clerk. I have only one elder sister and she is married"
+                        }}
+
+                      </div>
+                      <button type="button" {{action 'regView6' 6}} class="bttnNext">Next</button>
+                      <button type="button" {{action 'back' 6}} class="bttnBack">Back</button>
+                  </div>
+              {{/if}}
+
+              {{#if regView7}}
+                  <div>
+                      <div class="title sm-size">
+                          <h1>Let them know about your Details Education and Career</h1>
+                      </div>
+                      <div class="field">
+                          <label>Education & Career</label>
+                        {{textarea
+                        value=name
+                        class="control phold"
+                        rows="4"
+                        valueBinding="education"
+                        placeholder="I have completed my degree & Post graduate degree in IT field."
+                        }}
+
+                      </div>
+                      <button type="button" {{action 'regView7' 7}} class="bttnNext">Next</button>
+                      <button type="button" {{action 'back' 7}} class="bttnBack">Back</button>
+                  </div>
+              {{/if}}
+
+              {{#if regView8}}
+                  <div>
+                      <div class="title sm-size">
+                          <h1>What kind of person are you looking for?</h1>
+                      </div>
+                      <div class="field">
+                          <label>I am looking for</label>
+                        {{textarea
+                        value=name
+                        class="control phold"
+                        rows="4"
+                        valueBinding="lookingFor"
+                        placeholder="Decent , Down to earth , Genuine person"
+                        }}
+
+                      </div>
+                      <button type="button" {{action 'regView8' 8}} class="bttnNext">Next</button>
+                      <button type="button" {{action 'back' 8}} class="bttnBack">Back</button>
+                  </div>
+              {{/if}}
+              {{#if regView9}}
+                  <div>
+                      <div class="title sm-size">
+                          <h1>Verify Yourself</h1>
+                      </div>
+                      <div class="field">
+                          <label>Your Facebook page link<span class="note">(Our members will check your name & photo to be each profile to verify that you are genuine )</span></label>
+                        {{input type="text" class="control" valueBinding="facebook"}}
+
+                      </div>
+                      <div class="field">
+                          <label>Your Linkedin page link<span class="note">(We will never share these links without your approval)</span></label>
+                        {{input type="text" class="control" valueBinding="linkedin"}}
+
+                      </div>
+                      <div class="field">
+                          <label>National Identity Card Number<span class="note">(This will help our team to verify your genuineness)</span></label>
+                        {{input type="text" class="control" valueBinding="NIC"}}
+
+                      </div>
+
+                      <div class="field">
+                          <label>Mobile Number<span class="note">(Only for verification purposes not be shared with anyone)</span></label>
+                        {{input type="text" class="control" valueBinding="phoneNo"}}
+
+                      </div>
+                      <button type="button" {{action 'regView9'}} class="bttnNext">Create Account</button>
+                      <button type="button" {{action 'back' 9}} class="bttnBack">Back</button>
+
+                  </div>
+              {{/if}}
+
+            </form>
+
+        </form>
+    </div>
+    <div class="modal-footer">
+    </div>
+{{/modal-popup }}

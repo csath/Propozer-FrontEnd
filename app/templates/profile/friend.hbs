@@ -1,0 +1,107 @@
+<section id="content" class="common searchpage" style="padding-top: 20px">
+    <div class="container">
+        <div class="row" style="padding-bottom: 20px;"> <h4 style="font-weight: lighter; color: #555;">{{friendTopic}} </h4></div>
+        <div class="row">
+            <aside class="editpageleft">
+                <ul class="m-m-b">
+                    <li>
+                        <a {{action 'showAcceptedList' }} class="{{acceptedClass}}">Accepted Profile</a>
+                    </li>
+                    <li>
+                        <a {{action 'showRequestedList' }} class="{{requestedClass}}">Requested profile</a>
+                    </li>
+                    <li>
+                        <a {{action 'showWaitingList' }} class="{{waitingClass}}">Waiting profile</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="rightpartedit">
+            <div class="friend-content">
+              {{#if isAcceptedOn}}
+
+                  <ul class="m-m-b">
+                    {{#each acceptedList as |accept|}}
+                        <li>
+                            <a {{action 'showModal' 'view-profile'}}>
+                                <div class="accepted-friend">
+                                    <div class="list-pic">
+                                        <img src="{{accept.img}}" alt="">
+                                    </div>
+                                    <h6 class="fndlist-title">{{accept.fulname}}<span class="time-stamp">{{accept.timeStamp}}</span></h6>
+
+                                    <p class="fndlist-info">{{accept.id}}</p>
+                                    <div style="float: right">
+                                        <button type="button" class="btn-fndlist-chat">Chat</button>
+                                        <button type="button" class="btn-fndlist-view">Remove</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    {{else}}
+                            <p style="color: #999;">Sorry, nobody is here...</p>
+                    {{/each}}
+                  </ul>
+              {{/if}}
+
+              {{#if isRequestedOn}}
+                  <ul class="m-m-b">
+                  {{#each requestedList as |requested|}}
+                      <li>
+                          <a href="#">
+                              <div class="accepted-friend">
+                                  <div class="list-pic">
+                                      <img src="{{requested.img}}" alt="">
+                                  </div>
+                                  <h6 class="fndlist-title" style="color: #e94a6e">{{requested.id}}<span class="time-stamp">{{requested.timeStamp}}</span></h6>
+                                  <p class="fndlist-info" style="color: #777">@{{requested.city}}</p>
+
+                                  <div style="float: right">
+                                      <button type="button" class="btn-fndlist-view">Remove</button>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                  {{else}}
+                      <p style="color: #999;">Sorry, nobody is here...</p>
+                  {{/each}}
+                  </ul>
+              {{/if}}
+
+              {{#if isWaitingOn}}
+                  <ul class="m-m-b">
+                  {{#each waitingList as |waiting|}}
+                      <li>
+                          <a href="#">
+                              <div class="accepted-friend">
+                                  <div class="list-pic">
+                                      <img src="{{waiting.img}}" alt="">
+                                  </div>
+                                  <h6 class="fndlist-title" style="color: #e94a6e">P1004M<span class="time-stamp">{{waiting.timeStamp}}</span></h6>
+                                  <p class="fndlist-info" style="color: #777">@{{waiting.city}}</p>
+
+                                  <div style="float: right">
+                                      <button type="button" class="btn-fndlist-view">Remove</button>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                  {{else}}
+                      <p style="color: #999;">Sorry, nobody is here...</p>
+                  {{/each}}
+                  </ul>
+              {{/if}}
+
+
+            </div>
+
+            <div class="friend-content">
+
+            </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

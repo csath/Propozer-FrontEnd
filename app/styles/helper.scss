@@ -1,0 +1,253 @@
+.title {
+  font-family: 'vijaya_0';
+  font-size: 48px;
+  color: #353535;
+  text-align: center;
+}
+
+.dropdown {
+  display: inline-block;
+  //margin-left: 20px;
+  padding: 10px 1px;
+}
+
+.glyphicon-bell {
+  font-size: 1.5rem;
+}
+
+.notifications {
+  min-width: 420px;
+}
+
+.notifications-wrapper {
+  overflow: auto;
+  max-height: 250px;
+}
+
+.menu-title {
+  color: #e2335b;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.glyphicon-circle-arrow-right {
+  margin-left: 10px;
+}
+
+.notification-heading, .notification-footer {
+  padding: 2px 10px;
+}
+
+.dropdown-menu.divider {
+  margin: 5px 0;
+}
+
+.item-info {
+  font-size: 0.7rem;
+  color: #616161;
+}
+
+.item-title {
+  font-size: 1rem;
+  color: #000;
+}
+
+.time-stamp {
+  font-size: 0.7rem;
+  float: right;
+  color: #616161;
+}
+
+.notifications a.content {
+  text-decoration: none;
+  background: #ccc;
+}
+
+.notification-item {
+  padding: 10px;
+  margin: 3px;
+  background: #f1eded;
+  border-radius: 4px;
+}
+
+.notification-dropdown {
+  left: initial;
+  right: 0;
+  padding: 3px 5px;
+  min-width: 310px;
+  border: none;
+}
+
+.notification-dropdown > li > a {
+  padding: 0 0;
+  min-width: 310px;
+}
+
+.font-large {
+  font-size: large;
+  color: white;
+}
+
+.font-large:hover {
+  color: #e2335b;
+}
+
+.notification-btn {
+  border: none;
+  background-color: #fff;
+  padding-left: 22px;
+  background-color: #000000;
+}
+
+.notification-btn:focus {
+  outline: 0;
+}
+
+.notification-flag {
+  color: white;
+  position: absolute;
+  right: 14px;
+  top: 2px;
+  font-size: 0.6rem;
+  background-color: #e2335b;
+}
+
+.m-m-b {
+  margin-bottom: 75px;
+}
+
+.mennu-icon {
+  font-size: large;
+  color: #000;
+}
+
+.mennu-icon:hover {
+  color: #e2335b;
+}
+
+//-------------------------------------------------- friend list
+
+.accepted-friend {
+  width: 100%;
+  height: 89px;
+  padding: 7px;
+  margin: 3px;
+  background: #f1eded;
+  border-radius: 4px;
+}
+
+.accepted-friend:hover {
+  background-color: #fbdde3;
+}
+
+.accepted-friend:hover {
+  background-color: #fbdde3;
+}
+
+.friend-content {
+  margin: 10px;
+}
+
+.friend-content a {
+  text-decoration: none;
+}
+
+.friend-content li {
+  margin-bottom: 6px;
+}
+
+.list-pic {
+  float: left;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.list-pic img {
+    display: block;
+    max-width:75px;
+    max-height:75px;
+    width: auto;
+    height: auto;
+}
+
+.fndlist-title {
+  padding: 1px 10px 4px 85px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.fndlist-info {
+  padding: 1px 10px 10px 85px;
+  font-size: 0.7rem;
+  color: #e94a6e;
+}
+
+.btn-fndlist-chat{
+  background-color: #e94a6e;
+  color: white;
+  float: right;
+  padding: 1px 8px;
+  margin-left: 30px;
+  text-align: center;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  font-size: smaller;
+}
+
+.btn-fndlist-view {
+  background-color: #807f7f;
+  color: white;
+  float: right;
+  padding: 1px 8px;
+  //margin-left: 35px;
+  text-align: center;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  font-size: smaller;
+}
+
+//------------------------------------- Profile-popup start
+
+//------------------------------------- Logout Dropdown start
+.overwrite-logout-style {
+  min-width: initial;
+  width: 100px;
+}
+
+.overwrite-logout-style li a{
+  min-width: initial;
+  width: 90px;
+}
+//------------------------------------- Logout Dropdown end
+.profile-popup h1 {float: left; width: 100%; border-bottom: 1px solid #dfdfdf; padding-bottom: 12px; font-size: 15px; color: #e94a6e;}
+//.profile-popup h1 a {float: right; width: 15px; height: 16px; background: url(../assets/images/edit-icon.png) no-repeat 0 0;}
+//.profile-popup h1 a:hover {background: url(../assets/images/edit-icon-hover.png) no-repeat 0 0;}
+.profile-popup ul.about {float: left; width: 100%; margin-right: 15px; }
+
+.profile-popup ul.about li {float: left; width: 100%; padding-bottom: 7px; padding-top: 7px; border-bottom:1px dashed #e0dce2;}
+.profile-popup ul.about li:last-child {padding-bottom: 0; border-bottom:none;}
+.profile-popup .aboutdetails {float: left; width: 100%; padding: 21px 0 0 0;}
+.profile-popup .aboutdetails ul.about li label {float: left; width: 105px; color: #e94a6e; font-weight: 600; background: url(../assets/images/colon-icon.png) no-repeat 100% center;}
+.profile-popup .aboutdetails ul.about li p {float: left; padding-left: 25px; color: #737373;}
+.profile-popup .aboutdetails .incompletebox {float: right;}
+.profile-popup .aboutdetails .incompletebox a {float: left; background: #a6a6a6; font-size: 12px; padding: 6px 42px; color: #ffffff; font-weight: 500; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
+.profile-popup .aboutdetails .incompletebox a:hover {background: #e2335b;}
+
+.page-rank {float: left; width: 150px; height: 50px; border: 1px solid #ebebeb; margin-right: 25px; overflow: hidden; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; margin: 15px;}
+.page-rank h6 {padding: 5px 5px 2px 5px; text-align: center; color: #555; font-weight: 200; font-weight: bold;}
+.page-rank .rank-icon {display: block; text-align: center}
+.page-rank img {padding: 3px;}
+//------------------------------------- Profile-popup end
+
+.error-msg {
+  color: #ff6759;
+  font-size: small;
+  padding-left: 5px;
+}

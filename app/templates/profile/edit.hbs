@@ -1,0 +1,288 @@
+<section id="content" class="common searchpage">
+    <div class="container">
+        <div class="row" style="padding-bottom: 10px;"> <h4 style="font-weight: lighter; color: #555;">Add accurate details, it will increase your attractiveness... </h4></div>
+        <div class="row">
+            <aside class="editpageleft">
+                <div class="pic">
+                    <img src="../assets/images/user-pic2.png" alt="">
+                </div>
+                <ul class="m-m-b">
+                    <li>
+                        <a href="#" >Change Picture</a>
+                    </li>
+                    <li>
+                        <a href="#" >Change Password</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="rightpartedit">
+                <div class="modal-body">
+                    <form>
+
+                        <form>
+                            <div ng-show="regView == true">
+
+                                <div class="field field5 fl">
+                                    <label>First Name</label>
+                                  {{input type="text" class="control" valueBinding="fname" placeholder="First Name" id="firstName" autofocus="autofocus" required='required'}}
+                                    <p class="help-block" style="color: #FF0000">{{fnameMessage}}</p>
+                                </div>
+
+                                <div class="field field5 fr">
+                                    <label>Last name</label>
+                                  {{input type="text" class="control" valueBinding="lname" placeholder="Last Name"required='required'}}
+                                    <p class="help-block" style="color: #FF0000">{{lnameMessage}}</p>
+                                </div>
+
+                            </div>
+
+                              <div>
+                                  <div class="title">
+                                      <h4>Basic Information</h4>
+                                  </div>
+                                  <div class="field field5 fl">
+                                      <label>Country</label>
+                                    {{select-2
+                                    content=countryArray
+                                    value=country
+                                    placeholder="Choose your country living..."
+                                    }}
+                                      <p class="help-block" style="color: #FF0000">{{countryMessage}}</p>
+                                  </div>
+
+                                  <div class="field field5 fl">
+                                      <label>State</label>
+                                    {{select-2
+                                    content=stateLiveArray
+                                    value=stateLive
+                                    placeholder="Choose State..."
+                                    }}
+
+                                      <p class="help-block" style="color: #FF0000">{{stateLiveMessage}}</p>
+                                  </div>
+
+                                  <div class="field field5 fr">
+                                      <label>City</label>
+                                    {{select-2
+                                    content=cityArray
+                                    value=city
+                                    placeholder="Choose Your City..."
+                                    }}
+
+                                      <p class="help-block" style="color: #FF0000">{{cityMessage}}</p>
+                                  </div>
+
+                                  <div class="field">
+                                      <label>Gender</label>
+
+                                      <div class="radiobox">
+                                          <label>
+                                            {{radio-button
+                                            value="male"
+                                            groupValue=gender
+                                            name="gender"}}
+                                              Male
+                                          </label>
+                                          <label>
+                                            {{radio-button
+                                            value="female"
+                                            groupValue=gender
+                                            name="gender"}}
+
+                                              Female
+                                          </label>
+                                      </div>
+                                      <p class="help-block" style="color: #FF0000">{{genderMessage}}</p>
+                                  </div>
+                                  <div class="field">
+                                      <label>Height</label>
+                                    {{select-2
+                                    content=heightArray
+                                    value=height
+                                    placeholder="Choose Your Height..."
+                                    }}
+
+                                      <p class="help-block" style="color: #FF0000">{{heightMessage}}</p>
+                                  </div>
+                                  <div class="field">
+                                      <label>Date of Birth</label>
+                                    {{select-2
+                                    content=dateOfBirthYearArray
+                                    value=dateOfBirthYear
+                                    placeholder="Year"
+                                    class="editprf year"
+                                    }}
+
+                                    {{select-2
+                                    content=dateOfBirthMonthArray
+                                    value=dateOfBirthMonth
+                                    placeholder="Month"
+                                    class="editprf commonw"
+                                    }}
+
+                                    {{select-2
+                                    content=dateOfBirthDateArray
+                                    value=dateOfBirthDate
+                                    placeholder="Date"
+                                    class="editprf commonw"
+                                    }}
+
+                                      <p class="help-block" style="color: #FF0000">{{dateMessage}}</p>
+                                  </div>
+                                  <div class="field">
+                                      <label>Relegion</label>
+                                    {{select-2
+                                    content=relegionArray
+                                    value=relegion
+                                    placeholder="Choose Your Relegion..."
+                                    }}
+
+                                      <p class="help-block" style="color: #FF0000">{{relegionMessage}}</p>
+                                  </div>
+                                  <div class="field">
+                                      <label>Mother Tongue</label>
+                                    {{select-2
+                                    content=motherTongueArray
+                                    value=motherTongue
+                                    placeholder="Choose Your Language..."
+                                    }}
+
+                                      <p class="help-block" style="color: #FF0000">{{motherTongueMessage}}</p>
+                                  </div>
+
+                              </div>
+
+                              <div>
+                                  <div class="title">
+                                      <h4>Education and Career</h4>
+                                  </div>
+                                  <div class="field">
+                                      <label>Highest Education </label>
+                                    {{select-2
+                                    content=highestEducationArray
+                                    value=highestEducation
+                                    placeholder="Choose Your Education Level..."
+                                    }}
+
+                                      <p class="help-block" style="color: #FF0000">{{highestEducationMessage}}</p>
+
+                                  </div>
+                                  <div class="field">
+                                      <label>Career Field</label>
+                                    {{input type="text" class="control" valueBinding="career" placeholder="Career Field..."}}
+
+                                  </div>
+
+                                  <div class="field">
+                                      <label>Monthly Salary</label>
+                                    {{select-2
+                                    content=salaryArray
+                                    value=salary
+                                    placeholder="Choose Your Salary Range..."
+                                    }}
+
+                                      <p class="help-block" style="color: #FF0000">{{salaryMessage}}</p>
+                                  </div>
+                              </div>
+
+                              <div>
+                                  <div class="title sm-size">
+                                      <h4>Let them what kind of person you are</h4>
+                                  </div>
+
+                                  <div class="field">
+                                      <label>Myself</label>
+                                    {{textarea
+                                    value=name
+                                    class="control phold"
+                                    rows="4"
+                                    valueBinding="myself"
+                                    placeholder="I am 27 years old. I am a simple, honest, family oriented person like travelling, reading, movies and music. I like to enjoy each moment in my life. I studied in a famous girl's school in Colmbo."
+                                    }}
+
+                                  </div>
+                              </div>
+
+                              <div>
+
+                                  <div class="field">
+                                      <label>My Family</label>
+                                    {{textarea
+                                    value=name
+                                    class="control phold"
+                                    rows="4"
+                                    valueBinding="myFamily"
+                                    placeholder="My father is retired now and my mother is a clerk. I have only one elder sister and she is married"
+                                    }}
+
+                                  </div>
+                              </div>
+
+                              <div>
+
+                                  <div class="field">
+                                      <label>Education & Career</label>
+                                    {{textarea
+                                    value=name
+                                    class="control phold"
+                                    rows="4"
+                                    valueBinding="education"
+                                    placeholder="I have completed my degree & Post graduate degree in IT field."
+                                    }}
+
+                                  </div>
+                              </div>
+
+                              <div>
+
+                                  <div class="field">
+                                      <label>I am looking for</label>
+                                    {{textarea
+                                    value=name
+                                    class="control phold"
+                                    rows="4"
+                                    valueBinding="lookingFor"
+                                    placeholder="Decent , Down to earth , Genuine person"
+                                    }}
+
+                                  </div>
+                              </div>
+
+                              <div>
+                                  <div class="title sm-size">
+                                      <h4>Verify Yourself</h4>
+                                  </div>
+                                  <div class="field">
+                                      <label>Your Facebook page link<span class="note">(Our members will check your name & photo to be each profile to verify that you are genuine )</span></label>
+                                    {{input type="text" class="control" valueBinding="facebook"}}
+
+                                  </div>
+                                  <div class="field">
+                                      <label>Your Linkedin page link<span class="note">(We will never share these links without your approval)</span></label>
+                                    {{input type="text" class="control" valueBinding="linkedin"}}
+
+                                  </div>
+                                  <div class="field">
+                                      <label>National Identity Card Number<span class="note">(This will help our team to verify your genuineness)</span></label>
+                                    {{input type="text" class="control" valueBinding="NIC"}}
+
+                                  </div>
+
+                                  <div class="field">
+                                      <label>Mobile Number<span class="note">(Only for verification purposes not be shared with anyone)</span></label>
+                                    {{input type="text" class="control" valueBinding="phoneNo"}}
+
+                                  </div>
+
+                                  <button type="button" {{action 'regView9'}} class="bttnNext">Update</button>
+
+                              </div>
+                        </form>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

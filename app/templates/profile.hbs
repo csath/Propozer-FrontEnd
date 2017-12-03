@@ -1,0 +1,167 @@
+<header id="headerpart">
+    <div class="container">
+        <div class="topbar">
+            <div class="logo"><h1>
+              {{#link-to "profile"}}
+                  <a><img src="assets/images/logo.png" alt="Propozer.lk"/></a>
+              {{/link-to}}
+
+            </h1></div>
+            <div class="rheader">
+
+              {{#rl-dropdown-container class="dropdown rheader"}}
+                {{#rl-dropdown-toggle class="notification-btn"}}
+                    <img src="assets/images/user-pic3.png" alt="">
+                   <p style="color: white; float: left; padding-right: 7px">{{myProfile.firstName}}</p>
+                {{/rl-dropdown-toggle}}
+
+                {{#rl-dropdown tagName="ul" class="dropdown-menu notification-dropdown overwrite-logout-style" closeOnChildClick="a:link"}}
+
+                    <li><a class="content" {{action 'logout'}}>
+                        <div class="notification-item">
+                            <h6 class="item-title">Logout</h6>
+                        </div>
+                    </a></li>
+                {{/rl-dropdown}}
+              {{/rl-dropdown-container}}
+
+
+
+
+              {{#rl-dropdown-container class="dropdown rheader"}}
+                {{#rl-dropdown-toggle class="notification-btn"}}
+                    <span class="notification-flag">New</span>
+                    <i class="fa fa-bell font-large" aria-hidden="true"></i>
+                {{/rl-dropdown-toggle}}
+
+                {{#rl-dropdown tagName="ul" class="dropdown-menu notification-dropdown" closeOnChildClick="a:link"}}
+                    <div class="notification-heading"><h4 class="menu-title">Notifications</h4><h4
+                            class="menu-title pull-right">View all<i class="glyphicon glyphicon-circle-arrow-right"></i>
+                    </h4>
+                    </div>
+
+                    <li class="divider"></li>
+
+                    <li><a class="content" href="#">
+                        <div class="notification-item">
+                            <h6 class="item-title">Improve Your Account<span class="time-stamp">day ago</span></h6>
+
+                            <p class="item-info">Send by Admin</p>
+                        </div>
+                    </a></li>
+
+                    <li><a class="content" href="#">
+                        <div class="notification-item">
+                            <h6 class="item-title">Improve Your Account<span class="time-stamp">day ago</span></h6>
+
+                            <p class="item-info">Send by Admin</p>
+                        </div>
+                    </a></li>
+
+                    <li><a class="content" href="#">
+                        <div class="notification-item">
+                            <h6 class="item-title">Improve Your Account<span class="time-stamp">day ago</span></h6>
+
+                            <p class="item-info">Send by Admin</p>
+                        </div>
+                    </a></li>
+                {{/rl-dropdown}}
+              {{/rl-dropdown-container}}
+
+
+
+              {{#rl-dropdown-container class="dropdown rheader"}}
+                {{#rl-dropdown-toggle class="notification-btn"}}
+                    <span class="notification-flag">New</span>
+                    <i class="fa fa-envelope font-large" aria-hidden="true"></i>
+                {{/rl-dropdown-toggle}}
+
+                {{#rl-dropdown tagName="ul" class="dropdown-menu notification-dropdown" closeOnChildClick="a:link"}}
+                    <div class="notification-heading"><h4 class="menu-title">Messages</h4><h4
+                            class="menu-title pull-right">View all<i class="glyphicon glyphicon-circle-arrow-right"></i>
+                    </h4>
+                    </div>
+
+                    <li class="divider"></li>
+
+                    <li><a class="content" href="#">
+                        <div class="notification-item">
+                            <h6 class="item-title">P10004M<span class="time-stamp">1 min</span></h6>
+
+                            <p class="item-info">Hii</p>
+                        </div>
+                    </a></li>
+
+                    <li><a class="content" href="#">
+                        <div class="notification-item">
+                            <h6 class="item-title">P10004M<span class="time-stamp">day ago</span></h6>
+
+                            <p class="item-info">yes, its fine...</p>
+                        </div>
+                    </a></li>
+                {{/rl-dropdown}}
+              {{/rl-dropdown-container}}
+
+              {{#rl-dropdown-container class="dropdown rheader"}}
+                {{#rl-dropdown-toggle class="notification-btn"}}
+                    <span class="notification-flag">New</span>
+                    <i class="fa fa-heart font-large" aria-hidden="true"></i>
+                {{/rl-dropdown-toggle}}
+
+                {{#rl-dropdown tagName="ul" class="dropdown-menu notification-dropdown" closeOnChildClick="a:link"}}
+                    <div class="notification-heading"><h4 class="menu-title">Request</h4><h4
+                            class="menu-title pull-right">View all<i class="glyphicon glyphicon-circle-arrow-right"></i>
+                    </h4>
+                    </div>
+
+                    <li class="divider"></li>
+
+                    <li><a class="content" href="#">
+                        <div class="notification-item">
+                            <h6 class="item-title">Accepted request by P10004M<span class="time-stamp">1 min</span></h6>
+
+                            <p class="item-info">Accepted</p>
+                        </div>
+                    </a></li>
+
+                    <li><a class="content" href="#">
+                        <div class="notification-item">
+                            <h6 class="item-title">New request from P10004M<span class="time-stamp">day ago</span></h6>
+
+                            <p class="item-info">New request</p>
+                        </div>
+                    </a></li>
+                {{/rl-dropdown}}
+              {{/rl-dropdown-container}}
+
+                <!--<a {{!action 'showModal' 'registration'}}>Register</a>-->
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="navpart">
+    <div class="container">
+        <div class="nav nav-left">
+            <ul>
+                <li>{{#link-to "profile"}}<a>My Timeline</a>{{/link-to}}</li>
+                <li>{{#link-to "profile.edit"}}<a href="">Edit Profile</a>{{/link-to}}</li>
+                <li>{{#link-to "profile.search"}}<a>Serch Profile</a>{{/link-to}}</li>
+                <li>{{#link-to "profile.friend"}}<a>Manage Friends</a>{{/link-to}}</li>
+                <li>{{#link-to "profile.search"}}<a>Messages</a>{{/link-to}}</li>
+            </ul>
+        </div>
+
+        <div class="nav nav-left-icon">
+            <ul>
+                <li>{{#link-to "profile"}}<a> <i class="fa fa-user mennu-icon"></i></a>{{/link-to}}</li>
+                <li>{{#link-to "profile.edit"}}<a> <i class="fa fa-edit mennu-icon"></i></a>{{/link-to}}</li>
+                <li>{{#link-to "profile.search"}}<a> <i class="fa fa-search mennu-icon"></i></a>{{/link-to}}</li>
+                <li>{{#link-to "profile.friend"}}<a> <i class="fa fa-heart mennu-icon"></i></a>{{/link-to}}</li>
+                <li>{{#link-to "profile.search"}}<a> <i class="fa fa-envelope mennu-icon"></i></a>{{/link-to}}</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{{outlet}}

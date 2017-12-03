@@ -1,0 +1,129 @@
+{{#modal-popup ok='save' close='removeModal'}}
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="pic">
+                    <img src="{{userProfile.img}}" alt="">
+                </div>
+                <div class="page-rank">
+                    <h6>{{percentage}} Verified Profile</h6>
+
+                    <div class="rank-icon">
+                      {{#if isRank1}}
+                          <img src="../assets/images/rank-icon1.png" alt="verin" title="Verified by facebook profile">
+                      {{else if isRank2}}
+                          <img src="../assets/images/rank-icon1.png" alt="verin" title="Verified by facebook profile">
+                          <img src="../assets/images/rank-icon2.png" alt="vfd" title="Verified by National ID">
+                      {{else if isRank3}}
+                          <img src="../assets/images/rank-icon1.png" alt="verin" title="Verified by facebook profile">
+                          <img src="../assets/images/rank-icon2.png" alt="vfd" title="Verified by National ID">
+                          <img src="../assets/images/rank-icon3.png" alt="vfd" title="Verified by SMS">
+                      {{else}}
+
+                      {{/if}}
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 ">
+                <div class="profile-popup">
+                    <h1>{{userProfile.id}}<a href="#"></a></h1>
+
+                    <div class="aboutdetails">
+                        <ul class="about">
+                            {{#if isNameShow}}
+                            <li>
+                                <label>Name:</label>
+
+                                <p>{{userProfile.fullName}}</p>
+                            </li>
+                              {{/if}}
+                            <li>
+                                <label>Country:</label>
+
+                                <p>{{userProfile.country}}</p>
+                            </li>
+                            <li>
+                                <label>Lives in:</label>
+
+                                <p>{{userProfile.city}}</p>
+                            </li>
+                            <li>
+                                <label>Gender:</label>
+
+                                <p>{{userProfile.gender}}</p>
+                            </li>
+                            <li>
+                                <label>Height:</label>
+
+                                <p>{{userProfile.height}}</p>
+                            </li>
+                            <li>
+                                <label>Month of Birth:</label>
+
+                                <p>{{userProfile.birthday}}</p>
+                            </li>
+                            <li>
+                                <label>Religion:</label>
+
+                                <p>{{userProfile.religion}}</p>
+                            </li>
+                            <li>
+                                <label>Language:</label>
+
+                                <p>{{userProfile.motherTongue}}</p>
+                            </li>
+                            <li>
+                                <label>Education:</label>
+
+                                <p>{{userProfile.educationStatus}}</p>
+                            </li>
+                            <li>
+                                <label>Job:</label>
+
+                                <p>{{userProfile.career}}</p>
+                            </li>
+                            <li>
+                                <label>Salary:</label>
+
+                                <p>{{userProfile.salary}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="profile-popup">
+            <h1></h1>
+
+            <div class="aboutdetails">
+                <ul class="about">
+                    <li>
+                        <label>My Self:</label>
+
+                        <p>{{userProfile.myself}}</p>
+                    </li>
+                    <li>
+                        <label>My Familiy:</label>
+
+                        <p>{{userProfile.familyBackground}}</p>
+                    </li>
+                    <li>
+                        <label>My Education:</label>
+
+                        <p>{{userProfile.education}}</p>
+                    </li>
+                    <li>
+                        <label>Im looking for:</label>
+
+                        <p>{{userProfile.lookingFor}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="bttnBack" {{action 'closeModal'}}>Close</button>
+    </div>
+{{/modal-popup }}
